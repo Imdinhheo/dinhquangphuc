@@ -1,11 +1,43 @@
 <html>
 <style>
+  @keyframes slideRight {
+  0% {
+      opacity: 0;
+      transform: translateX(-80px);
+  }
+
+  100% {
+      opacity: 100%;
+      transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 body {
   background-image: url("img2.jpg");
   background-repeat: no-repeat;
    background-attachment: fixed;
   background-size: cover;
   color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1, h2, h3, ul
+{
+  opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .5s;
+}
+.player
+{
+  aspect-ratio: 16/9;
+  width: 50%;
+  opacity: 0;
+  animation: fadeIn .4s ease forwards;
+  animation-delay: .5s;
 }
 </style>
 <head>
@@ -14,7 +46,7 @@ body {
 <body>
 
 <h1>Giới thiệu về bản thân:</h1>
-<h2>Tôi tên là Đinh Quang Hiệu  .</h2>
+<h2>Tôi tên là <a href="https://www.facebook.com/profile.php?id=100056267833820"><span style="color: #ff0000"><b>[Đinh Quang Hiệu]</b></span></a>  .</h2>
 <ul>
  <li>Sinh:27/8/2006</li>
  <li>Học sinh lớp:12A3</li>
@@ -47,5 +79,14 @@ body {
     <li>Tổ trưởng tổ 3:Nguyễn Quang Minh</li>
     <li>Tổ trưởng tổ 4:Trần Hoàng Tiến</li>
 </ul>
+
+<section class="section2">
+  <div class="section2_container">
+    <div class="content2">
+      <iframe class="player" src="https://www.youtube.com/embed/atq9S7pp1rQ?si=HjYIC-UlsIhCGDX5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
 </body>
 </html
